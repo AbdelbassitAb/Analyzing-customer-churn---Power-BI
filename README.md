@@ -177,12 +177,13 @@ IF(
 
 ## 7. Repository Structure
 
+```
 Customer-Churn-PowerBI/
+│
 ├── README.md
 ├── dashboard/
 │   └── Customer_Churn_Dashboard.pbix
 ├── screenshots/
 └── measures.md
-
----
+```
 
