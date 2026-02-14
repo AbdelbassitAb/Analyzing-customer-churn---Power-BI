@@ -1,5 +1,13 @@
 # Customer Churn Analysis — Power BI Dashboard
 
+## Dashboard Preview (Overview Page)
+
+![Overview dashboard page](screenshots/overview.png)
+
+If you want to explore the rest of the report pages, check the `screenshots/` folder for all dashboard views.
+
+---
+
 ## 1. Project Overview
 
 This project analyzes customer churn behavior using a single dataset (`Databel - Data`).  
