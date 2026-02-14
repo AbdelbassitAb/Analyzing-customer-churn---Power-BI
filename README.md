@@ -1,5 +1,13 @@
 # Customer Churn Analysis — Power BI Dashboard
 
+## Dashboard Preview (Overview Page)
+
+![Overview dashboard page](screenshots/overview.png)
+
+If you want to explore the rest of the report pages, check the `screenshots/` folder for all dashboard views.
+
+---
+
 ## 1. Project Overview
 
 This project analyzes customer churn behavior using a single dataset (`Databel - Data`).  
@@ -50,7 +58,7 @@ Number of Churned Customers =
 SUM('Databel - Data'[Churned])
 
 Churn Rate =
-[Number of Churned Customers] / [Number of Customers]
+DIVIDE([Number of Churned Customers], [Number of Customers])
 ```
 
 ### Averages & Charges
@@ -60,10 +68,16 @@ Avg Customer Service Calls =
 AVERAGE('Databel - Data'[Customer Service Calls])
 
 Avg Extra Data Charges =
-SUM('Databel - Data'[Extra Data Charges]) / [Number of Customers]
+DIVIDE(
+    SUM('Databel - Data'[Extra Data Charges]),
+    [Number of Customers]
+)
 
 Avg Extra International Charges =
-SUM('Databel - Data'[Extra International Charges]) / [Number of Customers]
+DIVIDE(
+    SUM('Databel - Data'[Extra International Charges]),
+    [Number of Customers]
+)
 ```
 
 ### Calculated Columns
@@ -182,8 +196,7 @@ Customer-Churn-PowerBI/
 │
 ├── README.md
 ├── dashboard/
-│   └── Customer_Churn_Dashboard.pbix
+│   └── Analyzing customer churn.pbix
 ├── screenshots/
 └── measures.md
 ```
-
