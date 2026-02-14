@@ -50,7 +50,7 @@ Number of Churned Customers =
 SUM('Databel - Data'[Churned])
 
 Churn Rate =
-[Number of Churned Customers] / [Number of Customers]
+DIVIDE([Number of Churned Customers], [Number of Customers])
 ```
 
 ### Averages & Charges
@@ -60,10 +60,16 @@ Avg Customer Service Calls =
 AVERAGE('Databel - Data'[Customer Service Calls])
 
 Avg Extra Data Charges =
-SUM('Databel - Data'[Extra Data Charges]) / [Number of Customers]
+DIVIDE(
+    SUM('Databel - Data'[Extra Data Charges]),
+    [Number of Customers]
+)
 
 Avg Extra International Charges =
-SUM('Databel - Data'[Extra International Charges]) / [Number of Customers]
+DIVIDE(
+    SUM('Databel - Data'[Extra International Charges]),
+    [Number of Customers]
+)
 ```
 
 ### Calculated Columns
@@ -182,8 +188,7 @@ Customer-Churn-PowerBI/
 │
 ├── README.md
 ├── dashboard/
-│   └── Customer_Churn_Dashboard.pbix
+│   └── Analyzing customer churn.pbix
 ├── screenshots/
 └── measures.md
 ```
-
